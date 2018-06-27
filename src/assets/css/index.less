@@ -1,0 +1,155 @@
+:global {
+  @font-face {
+    font-family: 'PingFangSC-Regular';
+    src: url('../font/PingFangSCRegular.ttf') format('truetype'),
+    url('../font/PingFangSCRegular.ttf') format('embedded-opentype'),
+    url('../font/PingFangSCRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  /*初始化样式*/
+  body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    font-size: 100px;
+    font-family: PingFangSC-Regular;
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+  }
+
+  body, button, input, select, textarea {
+    font-size: 0.12rem;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+  }
+
+  address, cite, dfn, em, var {
+    font-style: normal;
+  }
+
+  code, kbd, pre, samp {
+    font-family: couriernew, courier, monospace;
+  }
+
+  small {
+    font-size: 0.12rem;
+  }
+
+  div {
+    box-sizing: border-box;
+  }
+
+  ul, ol {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  sup {
+    vertical-align: text-top;
+  }
+
+  sub {
+    vertical-align: text-bottom;
+  }
+
+  legend {
+    color: #000;
+  }
+
+  fieldset, img {
+    border: 0;
+  }
+
+  button, input, select, textarea {
+    font-size: 100%;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  /*flex 相关*/
+
+  .flex {
+    display: flex;
+    &.flex-column {
+      flex-direction: column;
+    }
+    &.flex-row {
+      flex-direction: row;
+    }
+    &.flex-center {
+      align-items: center;
+      justify-content: center;
+    }
+    &.flex-align-center {
+      align-items: center;
+    }
+    &.flex-content-center {
+      justify-content: center;
+    }
+    .flex-1 {
+      flex: 1;
+    }
+    .flex-2 {
+      flex: 2;
+    }
+    .flex-3 {
+      flex: 3;
+    }
+    .flex-4 {
+      flex: 4;
+    }
+  }
+
+  /*结构样式*/
+  #app {
+    height: 100%;
+    overflow: hidden;
+    .App {
+      height: 100%;
+      .switch-wrapper {
+        position: relative;
+      }
+
+      .switch-wrapper > div {
+        position: absolute;
+      }
+      .flex;
+      .flex-column;
+      .header {
+        content: "";
+        width: 100%;
+        height: .45rem;
+
+        .left, .right {
+          width: 0.4rem;
+        }
+        .title {
+          font-size: .16rem;
+        }
+      }
+      .container {
+        .flex-1;
+        overflow-y: auto;
+      }
+      .footer {
+        .flex;
+        .flex-center;
+        height: 0.4rem;
+        content: "";
+      }
+    }
+  }
+
+}
